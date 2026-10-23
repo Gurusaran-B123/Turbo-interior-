@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TURBO Interior Design & Wood Works | Trichy, Tamil Nadu</title>
+<meta name="description" content="TURBO Interior Design and Wood Works, Trichy — 15 years of experience in modular kitchens, cupboards, home interiors, custom plywood & wood works, staircases, wardrobes, pooja rooms and doors.">
+<meta name="theme-color" content="#fbf9f4">
+<style>
+:root{
+  --ink:#1d2b2f; --bg:#fbf9f4; --mist:#eef5f1; --peach:#fff1e4; --sky:#e8f2f6; --white:#fff;
+  --muted:#5d6f74; --teal:#2f8a84; --teal2:#5fb8ae; --coral:#e9825c; --coral2:#d9603a; --sun:#f7d58b;
+  --line:rgba(29,43,47,.12);
+  --serif:Georgia,"Times New Roman","Noto Serif Tamil",serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans Tamil","Latha",sans-serif;
+  --ease:cubic-bezier(.2,.7,.2,1);
+  --vgrain:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='w'><feTurbulence type='fractalNoise' baseFrequency='0.35 0.012' numOctaves='3' seed='4'/><feColorMatrix values='0 0 0 0 .45 0 0 0 0 .3 0 0 0 0 .15 1.5 0 0 0 -.55'/></filter><rect width='100%' height='100%' filter='url(%23w)'/></svg>");
+  --noise:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='.6'/></svg>");
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body::after{content:"";position:fixed;inset:0;background-image:var(--noise);opacity:.03;pointer-events:none;z-index:400}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
+input,select,textarea{font:inherit}
+svg{display:block}
+.wrap{width:min(1200px,92%);margin-inline:auto}
+section{position:relative}
+.pad{padding:clamp(70px,11vw,140px) 0}
+h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.1;letter-spacing:-.01em}
+h2{font-size:clamp(2rem,5vw,3.6rem);margin:.9rem 0 1.1rem}
+em{font-style:italic;color:var(--coral2)}
+.lead{color:var(--muted);font-size:clamp(1rem,1.5vw,1.15rem);max-width:620px}
+.center{text-align:center}.center .lead{margin-inline:auto}
+.eyebrow{display:inline-flex;align-items:center;gap:.7rem;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--teal);font-weight:600}
+.eyebrow::before{content:"";width:34px;height:1px;background:currentColor}
+.light{background:var(--white)}
+.light p{color:var(--muted)}
+.why-sec{background:var(--peach)}
+.mist{background:var(--mist)}
+
+/* loader / progress / spotlight */
+#loader{position:fixed;inset:0;z-index:500;background:var(--bg);display:grid;place-content:center;justify-items:center;gap:1.2rem;transition:transform .9s var(--ease) .1s,opacity .5s .6s}
+#loader b{font-family:var(--serif);font-size:clamp(2.4rem,9vw,4.5rem);letter-spacing:.3em;color:transparent;-webkit-text-stroke:1px var(--teal);animation:fillt 1.4s forwards}
+#loader i{display:block;width:160px;height:2px;background:var(--line);position:relative;overflow:hidden}
+#loader i::after{content:"";position:absolute;inset:0;background:var(--coral);transform:translateX(-100%);animation:ld 1.3s var(--ease) forwards}
+@keyframes fillt{to{color:var(--teal)}}@keyframes ld{to{transform:none}}
+body.ready #loader{transform:translateY(-100%);opacity:0;pointer-events:none}
+#progress{position:fixed;top:0;left:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--teal2),var(--teal),var(--coral));z-index:300}
+#spot{position:fixed;left:0;top:0;width:480px;height:480px;border-radius:50%;pointer-events:none;z-index:1;background:radial-gradient(circle,rgba(95,184,174,.2),transparent 65%);transform:translate3d(-999px,-999px,0)}
+
+/* header */
+header{position:fixed;inset:0 0 auto 0;z-index:200;transition:.4s var(--ease)}
+header.scrolled{background:rgba(251,249,244,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--line);box-shadow:0 8px 30px rgba(47,138,132,.08)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:1rem}
+.logo{display:flex;align-items:center;gap:.7rem;line-height:1.1}
+.logo svg{width:40px;height:40px;flex:none}
+.logo b{display:block;font-family:var(--serif);font-size:1.35rem;letter-spacing:.2em;color:var(--ink)}
+.logo small{display:block;font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);font-weight:600}
+.links{display:flex;gap:1.8rem;align-items:center}
+.links a{font-size:.92rem;color:#3d5156;position:relative;padding:.2rem 0;transition:color .3s;font-weight:500}
+.links a::after{content:"";position:absolute;left:0;bottom:-2px;height:2px;width:100%;background:var(--coral);transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease)}
+.links a:hover,.links a.on{color:var(--teal)}.links a:hover::after,.links a.on::after{transform:scaleX(1)}
+.nav-r{display:flex;gap:.7rem;align-items:center}
+.lang{padding:.45rem .9rem;border:1px solid var(--teal);border-radius:99px;font-size:.85rem;color:var(--teal);transition:.3s;font-weight:600}
+.lang:hover{background:var(--teal);color:#fff}
+.burger{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:12px;place-items:center;background:#fff}
+.burger span,.burger span::before,.burger span::after{display:block;width:18px;height:2px;background:var(--ink);position:relative;transition:.3s}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0}
+.burger span::before{top:-6px}.burger span::after{top:6px}
+.burger.open span{background:transparent}.burger.open span::before{top:0;transform:rotate(45deg)}.burger.open span::after{top:0;transform:rotate(-45deg)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:.95rem 1.7rem;border-radius:99px;font-weight:600;font-size:.95rem;transition:transform .35s var(--ease),box-shadow .35s,background .3s;position:relative;will-change:transform}
+.btn.gold{background:linear-gradient(135deg,var(--teal2),var(--teal) 70%);color:#fff;box-shadow:0 12px 28px rgba(47,138,132,.32)}
+.btn.gold:hover{box-shadow:0 18px 40px rgba(47,138,132,.45)}
+.btn.line{border:1.5px solid var(--teal);color:var(--teal);background:rgba(255,255,255,.6)}
+.btn.line:hover{background:var(--teal);color:#fff}
+.btn.dark{background:var(--ink);color:#fff}
+.btn.sm{padding:.65rem 1.2rem;font-size:.88rem}
+
+/* parallax base */
+[data-speed]{transform:translate3d(calc(var(--mx,0)*var(--d,0)*1px),calc(var(--sy,0)*1px + var(--my,0)*var(--d,0)*1px),0);will-change:transform}
+.hero [data-depth]{transition:transform .4s var(--ease)}
+
+/* light wood planks */
+.plank{position:absolute;border-radius:10px;background:
+  repeating-linear-gradient(90deg,rgba(120,80,40,.12) 0 1px,transparent 1px 11px),
+  repeating-linear-gradient(90deg,rgba(255,255,255,.28) 0 3px,transparent 3px 23px),
+  linear-gradient(180deg,var(--c1),var(--c2));
+  box-shadow:0 26px 50px rgba(120,90,50,.22),inset 0 0 0 1px rgba(255,255,255,.55);rotate:var(--r,0deg);overflow:hidden}
+.plank::after{content:"";position:absolute;inset:0;background-image:var(--vgrain);background-size:300px 300px;mix-blend-mode:multiply;opacity:.35}
+
+/* hero */
+.hero{min-height:100vh;display:grid;align-items:center;padding:120px 0 90px;overflow:hidden;isolation:isolate;background:radial-gradient(900px 600px at 80% 15%,rgba(95,184,174,.3),transparent 60%),radial-gradient(800px 600px at 5% 95%,rgba(233,130,92,.2),transparent 60%),radial-gradient(600px 400px at 50% 55%,rgba(247,213,139,.28),transparent 70%),var(--bg)}
+#dust{position:absolute;inset:0;z-index:0;pointer-events:none}
+.giant{position:absolute;left:50%;top:50%;margin:-.55em 0 0 -1.7em;font-family:var(--serif);font-weight:900;font-size:clamp(6rem,30vw,28rem);line-height:1;color:transparent;-webkit-text-stroke:1.5px rgba(47,138,132,.18);letter-spacing:.05em;z-index:-2;white-space:nowrap;user-select:none}
+.hero .plank{z-index:-1}
+.pk1{--c1:#f0d6b0;--c2:#d4a877;--r:14deg;width:120px;height:430px;right:7%;top:14%}
+.pk2{--c1:#f7e6c9;--c2:#dfba88;--r:-9deg;width:90px;height:330px;right:20%;top:30%}
+.pk3{--c1:#e6c298;--c2:#c18f58;--r:22deg;width:70px;height:260px;right:2%;top:50%}
+.pk4{--c1:#f3dfbf;--c2:#d9b27c;--r:-16deg;width:100px;height:360px;left:3%;top:18%;opacity:.85}
+.pk5{--c1:#f9ecd3;--c2:#e2c296;--r:8deg;width:56px;height:210px;left:15%;bottom:6%;opacity:.9}
+.pk6{--c1:#f0d6b0;--c2:#d4a877;--r:-30deg;width:44px;height:170px;left:44%;top:6%;filter:blur(2px);opacity:.7}
+.hero-in{position:relative;z-index:3;max-width:760px}
+.hero h1{font-size:clamp(2.6rem,7.2vw,5.8rem);margin:1.2rem 0 1.2rem}
+.hero .lead{margin-bottom:2rem;font-size:clamp(1rem,1.6vw,1.2rem);color:#47595e}
+.hin{opacity:0;transform:translateY(46px);transition:opacity 1s var(--ease),transform 1s var(--ease);transition-delay:var(--dl,0s)}
+body.ready .hin{opacity:1;transform:none}
+.cta-row{display:flex;gap:1rem;flex-wrap:wrap}
+.hero-stats{display:flex;gap:clamp(1.4rem,4vw,3.5rem);margin-top:3.2rem;flex-wrap:wrap}
+.hero-stats b{display:block;font-family:var(--serif);font-size:clamp(1.9rem,3.6vw,2.9rem);color:var(--teal);line-height:1}
+.hero-stats small{color:var(--muted);font-size:.82rem}
+.scrollcue{position:absolute;bottom:22px;left:50%;translate:-50% 0;font-size:.7rem;letter-spacing:.3em;color:var(--muted);text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:.6rem;z-index:3}
+.scrollcue::after{content:"";width:1px;height:44px;background:linear-gradient(var(--teal),transparent);animation:drip 2s infinite}
+@keyframes drip{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* marquee */
+.marq{background:linear-gradient(90deg,#bfe3dc,#e8f5f1,#ffe3d1,#e8f5f1,#bfe3dc);color:var(--ink);overflow:hidden;padding:1rem 0;transform:rotate(-1.2deg);margin:-14px -2% 0;position:relative;z-index:5;box-shadow:0 10px 30px rgba(47,138,132,.14)}
+.mq{display:flex;gap:2.5rem;width:max-content;animation:mq 34s linear infinite;font-family:var(--serif);font-size:1.25rem;font-weight:700;white-space:nowrap}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(50px);filter:blur(5px);transition:opacity .9s var(--ease),transform .9s var(--ease),filter .9s var(--ease);transition-delay:var(--dl,0s)}
+.reveal.in{opacity:1;transform:none;filter:none}
+.reveal.l{transform:translateX(-70px)}.reveal.r{transform:translateX(70px)}
+.reveal.l.in,.reveal.r.in{transform:none}
+.curtain{clip-path:inset(0 100% 0 0);transition:clip-path 1.3s var(--ease)}
+.curtain.in{clip-path:inset(0 0 0 0)}
+
+/* about */
+.about-g{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,6rem);align-items:center}
+.collage{position:relative;aspect-ratio:1/1.08;border-radius:30px;background:linear-gradient(160deg,var(--sky),var(--peach));overflow:hidden;isolation:isolate;box-shadow:0 30px 70px rgba(47,138,132,.15)}
+.collage .plank{z-index:0}
+.cp1{--c1:#f0d6b0;--c2:#d4a877;--r:-6deg;width:34%;height:78%;left:10%;top:10%}
+.cp2{--c1:#f7e6c9;--c2:#dfba88;--r:5deg;width:30%;height:70%;left:38%;top:18%}
+.cp3{--c1:#e6c298;--c2:#c18f58;--r:-3deg;width:24%;height:56%;left:66%;top:8%}
+.collage .badge{position:absolute;right:6%;bottom:6%;width:42%;z-index:2}
+.badge svg{width:100%;height:auto;transition:transform .1s linear}
+.badge .core{position:absolute;inset:0;display:grid;place-content:center;text-align:center;font-family:var(--serif);color:var(--teal);line-height:1}
+.badge .core b{font-size:clamp(2.2rem,5vw,3.6rem)}
+.badge .core small{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.ticks{list-style:none;margin:1.5rem 0 2rem;display:grid;gap:.6rem}
+.ticks li{padding-left:1.8rem;position:relative;color:#47595e}
+.ticks li::before{content:"";position:absolute;left:0;top:.55em;width:12px;height:6px;border-left:2px solid var(--coral);border-bottom:2px solid var(--coral);transform:rotate(-45deg)}
+
+/* services horizontal */
+.hs{background:linear-gradient(180deg,var(--mist),#f8fbf9)}
+.hs-s{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;flex-direction:column;justify-content:center;gap:1.6rem;padding-top:70px}
+.hs-head{width:min(1200px,92%);margin-inline:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;flex-wrap:wrap}
+.hs-head h2{margin:.5rem 0 0;font-size:clamp(1.8rem,4vw,3rem)}
+.hs-count{font-family:var(--serif);color:var(--teal);font-size:1.4rem}
+.hs-count span{color:var(--muted);font-size:1rem}
+.hs-t{display:flex;gap:1.6rem;padding-inline:max(4vw,calc((100vw - 1200px)/2));width:max-content;will-change:transform}
+.panel{width:min(86vw,880px);display:grid;grid-template-columns:1fr 1fr;border-radius:28px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:0 24px 60px rgba(47,138,132,.15);flex:none}
+.art{position:relative;overflow:hidden;background:radial-gradient(circle at 50% 40%,rgba(95,184,174,.28),transparent 70%),#f1f8f5;display:grid;place-items:center;padding:1.2rem;min-height:300px}
+.panel:nth-child(even) .art{background:radial-gradient(circle at 50% 40%,rgba(233,130,92,.24),transparent 70%),#fff3e8}
+.art svg{width:100%;max-width:340px;height:auto;transform:translateX(var(--ax,0));transition:transform .15s linear}
+.art svg .f{fill:#efd5b0;stroke:var(--teal);stroke-width:1.6}
+.art svg .f2{fill:#f8e8cd;stroke:var(--teal);stroke-width:1.6}
+.art svg .l{fill:none;stroke:var(--teal);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.art svg .b{fill:var(--coral);stroke:none}
+.pn{position:absolute;left:1rem;top:.6rem;font-family:var(--serif);font-size:4.5rem;line-height:1;color:transparent;-webkit-text-stroke:1px rgba(47,138,132,.35)}
+.ptxt{padding:clamp(1.4rem,3vw,2.4rem);display:flex;flex-direction:column;justify-content:center;gap:.9rem}
+.ptxt h3{font-size:clamp(1.5rem,2.6vw,2.1rem);color:var(--teal)}
+.ptxt p{color:#4b5f64;font-size:.97rem}
+.ptxt ul{list-style:none;display:grid;gap:.35rem;font-size:.9rem;color:var(--muted)}
+.ptxt li::before{content:"◆ ";color:var(--coral);font-size:.7em}
+.hs-bar{height:3px;background:var(--line);margin-inline:max(4vw,calc((100vw - 1200px)/2));border-radius:2px;overflow:hidden}
+.hs-bar i{display:block;height:100%;transform-origin:left;transform:scaleX(var(--p,0));background:linear-gradient(90deg,var(--teal2),var(--coral))}
+
+/* stats band */
+.band{min-height:78vh;display:grid;place-items:center;overflow:hidden;isolation:isolate;text-align:center;padding:90px 0}
+.band .bg{position:absolute;inset:-30% 0;z-index:-2;background:radial-gradient(circle at 25% 30%,rgba(247,213,139,.55),transparent 45%),radial-gradient(circle at 80% 70%,rgba(95,184,174,.4),transparent 45%),linear-gradient(180deg,#fdf1e4,#eaf4f0)}
+.band .plank{z-index:-1;opacity:.85}
+.bp1{--c1:#f0d6b0;--c2:#d4a877;--r:-18deg;width:90px;height:360px;left:6%;top:10%}
+.bp2{--c1:#f7e6c9;--c2:#dfba88;--r:12deg;width:70px;height:280px;right:8%;bottom:8%}
+.band h2{font-size:clamp(2rem,6vw,4.6rem);max-width:900px;margin-inline:auto}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-top:3rem}
+.stat{padding:1.6rem 1rem;border-radius:20px;background:rgba(255,255,255,.75);border:1px solid var(--line);backdrop-filter:blur(8px);box-shadow:0 14px 34px rgba(47,138,132,.1)}
+.stat b{display:block;font-family:var(--serif);font-size:clamp(2rem,4.4vw,3.4rem);color:var(--teal);line-height:1.1}
+.stat small{color:var(--muted)}
+
+/* why */
+.why-g{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem;margin-top:3.2rem}
+.why{padding:2rem;border-radius:22px;background:#fff;border:1px solid var(--line);position:relative;overflow:hidden;transition:transform .35s var(--ease),box-shadow .35s;transform-style:preserve-3d;will-change:transform}
+.why::before{content:"";position:absolute;inset:0;background:radial-gradient(360px circle at var(--x,50%) var(--y,0%),rgba(95,184,174,.22),transparent 45%);opacity:0;transition:.4s}
+.why:hover::before{opacity:1}
+.why:hover{box-shadow:0 24px 50px rgba(47,138,132,.18)}
+.why .n{font-family:var(--serif);font-size:3.4rem;line-height:1;color:transparent;-webkit-text-stroke:1.2px var(--coral)}
+.why h3{font-size:1.3rem;margin:.6rem 0 .4rem;color:var(--ink)}
+.why p{font-size:.96rem}
+
+/* finishes */
+.fin{background:linear-gradient(180deg,#fff,var(--sky));overflow:hidden}
+.fin-g{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.sw{display:flex;gap:.8rem;flex-wrap:wrap;margin:1.6rem 0 1rem}
+.sw button{width:54px;height:54px;border-radius:50%;background:var(--c);border:2px solid #fff;position:relative;transition:transform .35s var(--ease);box-shadow:0 6px 16px rgba(29,43,47,.2)}
+.sw button:hover{transform:scale(1.12)}
+.sw button.on{transform:scale(1.12)}
+.sw button.on::after{content:"";position:absolute;inset:-7px;border-radius:50%;border:1.5px dashed var(--teal);animation:spin 8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.fname{font-family:var(--serif);font-size:1.6rem;color:var(--teal)}
+.fnote{font-size:.8rem;color:var(--muted);margin:.3rem 0 1.4rem}
+.fin-art{border-radius:30px;padding:clamp(1rem,3vw,2rem);background:radial-gradient(circle at 50% 30%,rgba(95,184,174,.22),transparent 70%),#fff;border:1px solid var(--line);box-shadow:0 36px 80px rgba(47,138,132,.18)}
+.fin-art svg{width:100%;height:auto}
+.fin-art .fin-c{fill:var(--fin,#5a3a24);transition:fill .7s var(--ease)}
+.fin-art .gr{opacity:.4;mix-blend-mode:multiply}
+.fin-art .ln{fill:none;stroke:rgba(0,0,0,.35);stroke-width:1.5}
+.fin-art .br{fill:#2b3a3e}
+
+/* process */
+.proc{background:var(--bg)}
+.tl{position:relative;max-width:980px;margin:4rem auto 0}
+.tl::before,.tl-fill{content:"";position:absolute;left:50%;top:0;bottom:0;width:2px;margin-left:-1px;background:var(--line)}
+.tl-fill{background:linear-gradient(var(--teal2),var(--coral));bottom:auto;height:calc(var(--p,0)*100%);box-shadow:0 0 14px rgba(95,184,174,.6)}
+.tl-item{display:grid;grid-template-columns:1fr 1fr;position:relative;margin-bottom:3rem}
+.tl-item:last-child{margin-bottom:0}
+.tl-card{grid-column:1;padding:1.6rem 2rem 1.6rem 0;text-align:right}
+.tl-item:nth-child(odd) .tl-card{grid-column:1}
+.tl-item:nth-child(even) .tl-card{grid-column:2;text-align:left;padding:1.6rem 0 1.6rem 2rem}
+.tl-card h3{font-size:1.5rem;color:var(--teal);margin-bottom:.3rem}
+.tl-card p{color:var(--muted);font-size:.96rem}
+.tl-dot{position:absolute;left:50%;top:1.7rem;width:22px;height:22px;margin-left:-11px;border-radius:50%;background:#fff;border:2px solid #c9d6d3;transition:.5s var(--ease);display:grid;place-items:center;font-size:.6rem;font-weight:700;color:transparent}
+.tl-item.on .tl-dot{border-color:var(--teal);background:var(--teal);color:#fff;transform:scale(1.35);box-shadow:0 0 0 6px rgba(95,184,174,.25)}
+.tl-item .tl-card{opacity:.4;transform:translateX(var(--sx,0));transition:.7s var(--ease)}
+.tl-item:nth-child(odd){--sx:-30px}.tl-item:nth-child(even){--sx:30px}
+.tl-item.on .tl-card{opacity:1;transform:none}
+
+/* contact */
+.contact-g{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(2rem,5vw,4rem);align-items:start;margin-top:3rem}
+.info{display:grid;gap:1rem}
+.ic{display:flex;gap:1rem;align-items:center;padding:1.1rem 1.3rem;border-radius:18px;background:#fff;border:1px solid var(--line);transition:transform .35s var(--ease),box-shadow .35s}
+.ic:hover{transform:translateX(8px);box-shadow:0 14px 34px rgba(47,138,132,.15)}
+.ic i{flex:none;width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,#d3eee9,#fde2d2);font-style:normal;font-size:1.2rem}
+.ic small{display:block;color:var(--muted);font-size:.76rem;letter-spacing:.1em;text-transform:uppercase}
+.ic b{color:var(--ink);font-size:1.02rem;word-break:break-word}
+form.enq{padding:clamp(1.4rem,3vw,2.2rem);border-radius:26px;background:#fff;color:var(--ink);border:1px solid var(--line);box-shadow:0 30px 70px rgba(47,138,132,.16);display:grid;gap:1rem}
+form.enq h3{font-size:1.6rem;color:var(--teal)}
+.fld{display:grid;gap:.35rem}
+.fld label{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.fld input,.fld select,.fld textarea{width:100%;padding:.85rem 1rem;border-radius:12px;border:1px solid #d5e0dd;background:#f8fbfa;color:var(--ink);outline:none;transition:border-color .3s,box-shadow .3s}
+.fld input:focus,.fld select:focus,.fld textarea:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(95,184,174,.25);background:#fff}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.fld textarea{min-height:100px;resize:vertical}
+
+/* footer */
+footer{background:#e3eee9;padding:4rem 0 1.6rem;border-top:1px solid var(--line)}
+.fg{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:2rem}
+.fg h4{font-family:var(--serif);color:var(--teal);margin-bottom:.9rem}
+.fg a,.fg p{display:block;color:#4b5f64;font-size:.92rem;padding:.15rem 0;transition:.3s}
+.fg .logo{display:flex}
+.fg a:hover{color:var(--teal);transform:translateX(4px)}
+.copy{margin-top:2.4rem;padding-top:1.4rem;border-top:1px solid var(--line);color:#667a7e;font-size:.84rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+
+/* floating */
+#toast{position:fixed;bottom:90px;left:50%;translate:-50% 30px;background:#fff;color:var(--ink);border:1px solid var(--teal);box-shadow:0 14px 40px rgba(29,43,47,.18);padding:.8rem 1.4rem;border-radius:14px;opacity:0;transition:.45s var(--ease);z-index:350;font-size:.9rem;pointer-events:none;max-width:92vw;text-align:center}
+#toast.show{opacity:1;translate:-50% 0}
+.fab{position:fixed;right:18px;z-index:150;width:52px;height:52px;border-radius:50%;display:grid;place-items:center;box-shadow:0 12px 26px rgba(29,43,47,.22);transition:.4s var(--ease)}
+#wa{bottom:20px;background:#25d366;color:#fff}
+#wa:hover{transform:scale(1.1)}
+#wa::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid #25d366;animation:ping 2s infinite}
+@keyframes ping{to{transform:scale(1.6);opacity:0}}
+#top{bottom:84px;background:var(--teal);color:#fff;opacity:0;transform:translateY(20px);pointer-events:none}
+#top.show{opacity:1;transform:none;pointer-events:auto}
+.mbar{display:none}
+
+/* responsive */
+@media(max-width:1000px){
+  .about-g,.fin-g,.contact-g{grid-template-columns:1fr}
+  .why-g{grid-template-columns:1fr 1fr}
+  .stats{grid-template-columns:1fr 1fr}
+  .pk3,.pk5,.pk6{display:none}
+  .fg{grid-template-columns:1fr 1fr}.fg>div:first-child{grid-column:1/-1}
+}
+@media(max-width:860px){
+  .burger{display:grid}
+  .links{position:fixed;inset:76px 0 auto 0;flex-direction:column;gap:0;align-items:stretch;background:rgba(251,249,244,.98);backdrop-filter:blur(18px);padding:.6rem 0 1.2rem;transform:translateY(-130%);transition:transform .5s var(--ease);border-bottom:1px solid var(--line);box-shadow:0 20px 40px rgba(47,138,132,.12)}
+  .links.open{transform:none}
+  .links a{padding:1rem 1.6rem;font-size:1.05rem}
+  .links a::after{display:none}
+  .nav-r .btn{display:none}
+  .pk1{right:-6%;opacity:.5}.pk2{right:12%;opacity:.4}.pk4{left:-4%;opacity:.4}
+  .panel{grid-template-columns:1fr;width:84vw}
+  .art{min-height:0;height:min(26vh,210px);padding:.6rem}
+  .art svg{max-width:260px;max-height:100%}
+  .pn{font-size:3rem}
+  .ptxt{padding:1.1rem 1.3rem 1.3rem;gap:.55rem}
+  .ptxt p{font-size:.9rem}
+  .ptxt ul{display:none}
+  .tl::before,.tl-fill{left:18px}
+  .tl-item{grid-template-columns:1fr}
+  .tl-card,.tl-item:nth-child(even) .tl-card{grid-column:1;text-align:left;padding:.4rem 0 .4rem 3.2rem}
+  .tl-dot{left:18px;top:.6rem}
+  .tl-item:nth-child(odd),.tl-item:nth-child(even){--sx:24px}
+}
+@media(max-width:620px){
+  .why-g{grid-template-columns:1fr}
+  .row2{grid-template-columns:1fr}
+  .fg{grid-template-columns:1fr}
+  .stats{gap:.7rem}
+  .logo small{display:none}
+  .hero-stats{gap:1.2rem}
+  .reveal.l,.reveal.r{transform:translateY(40px)}
+  .mbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:160;background:rgba(251,249,244,.96);backdrop-filter:blur(14px);border-top:1px solid var(--line);padding:.6rem;gap:.6rem}
+  .mbar a{padding:.8rem;text-align:center;border-radius:12px;font-weight:600;font-size:.92rem}
+  .mbar .c{background:linear-gradient(135deg,var(--teal2),var(--teal));color:#fff}
+  .mbar .w{background:#25d366;color:#fff}
+  #wa{display:none}#top{bottom:76px}
+  body{padding-bottom:64px}
+  #toast{bottom:84px}
+}
+@media(max-height:640px) and (max-width:860px){.ptxt p{display:none}}
+@media(hover:none){#spot{display:none}}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  [data-speed]{transform:none}
+  .reveal,.hin{opacity:1;transform:none;filter:none}.curtain{clip-path:none}
+}
+</style>
+</head>
+<body>
+<div id="loader"><b>TURBO</b><i></i></div>
+<div id="progress"></div>
+<div id="spot"></div>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a href="#home" class="logo" aria-label="TURBO home">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="1" y="1" width="46" height="46" rx="12" fill="#2f8a84"/><path d="M10 14h28v7H27v14h-6V21H10z" fill="#ffffff"/></svg>
+      <span><b>TURBO</b><small>Interior Design & Wood Works</small></span>
+    </a>
+    <nav class="links" id="links">
+      <a href="#about" data-ta="எங்களை பற்றி">About</a>
+      <a href="#services" data-ta="சேவைகள்">Services</a>
+      <a href="#finishes" data-ta="மர வகைகள்">Finishes</a>
+      <a href="#process" data-ta="செயல்முறை">Process</a>
+      <a href="#contact" data-ta="தொடர்புக்கு">Contact</a>
+    </nav>
+    <div class="nav-r">
+      <button class="lang" id="lang" aria-label="Switch language">தமிழ்</button>
+      <a href="#contact" class="btn gold sm" data-ta="இலவச மதிப்பீடு">Free Quote</a>
+      <button class="burger" id="burger" aria-label="Menu"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <canvas id="dust"></canvas>
+  <div class="giant" data-speed="-.2" data-depth="-14" aria-hidden="true">TURBO</div>
+  <div class="plank pk1" data-speed="-.32" data-depth="38"></div>
+  <div class="plank pk2" data-speed=".14" data-depth="-26"></div>
+  <div class="plank pk3" data-speed="-.5" data-depth="52"></div>
+  <div class="plank pk4" data-speed=".2" data-depth="-34"></div>
+  <div class="plank pk5" data-speed="-.4" data-depth="44"></div>
+  <div class="plank pk6" data-speed=".3" data-depth="-20"></div>
+  <div class="wrap">
+    <div class="hero-in" data-speed="-.06">
+      <span class="eyebrow hin" style="--dl:.2s" data-ta="15 ஆண்டுகள் அனுபவம் · திருச்சி">15 years of craftsmanship · Trichy</span>
+      <h1 class="hin" style="--dl:.35s" data-ta="மரத்தால் உருவாகும் <em>நீங்கள் விரும்பும் இல்லம்</em>">Wood, shaped into <em>homes you'll love</em></h1>
+      <p class="lead hin" style="--dl:.5s" data-ta="டர்போ இன்டீரியர் டிசைன் & வுட் வொர்க்ஸ் — மாடுலர் கிச்சன், வார்ட்ரோப், பூஜை அறை, படிக்கட்டு, கதவுகள் அனைத்தும் உங்கள் இடத்திற்கேற்ப திருச்சியில் உருவாக்கப்படுகின்றன.">TURBO Interior Design & Wood Works builds modular kitchens, wardrobes, pooja rooms, staircases and doors — made to measure for homes in Trichy.</p>
+      <div class="cta-row hin" style="--dl:.65s">
+        <a href="#contact" class="btn gold" data-mag data-ta="இலவச மதிப்பீடு பெறுங்கள் →">Get a free quote →</a>
+        <a href="#services" class="btn line" data-mag data-ta="எங்கள் சேவைகள்">Our services</a>
+      </div>
+      <div class="hero-stats hin" style="--dl:.8s">
+        <div><b data-count="15" data-suffix="+">0</b><small data-ta="ஆண்டுகள் அனுபவம்">Years of experience</small></div>
+        <div><b data-count="8">0</b><small data-ta="முக்கிய சேவைகள்">Core services</small></div>
+        <div><b data-count="100" data-suffix="%">0</b><small data-ta="உங்கள் அளவுக்கேற்ப">Made to measure</small></div>
+      </div>
+    </div>
+  </div>
+  <div class="scrollcue">Scroll</div>
+</section>
+
+<div class="marq" aria-hidden="true"><div class="mq" id="mq"></div></div>
+
+<!-- ABOUT -->
+<section class="pad light" id="about">
+  <div class="wrap about-g">
+    <div class="collage curtain reveal">
+      <div class="plank cp1" data-speed="-.12"></div>
+      <div class="plank cp2" data-speed=".1"></div>
+      <div class="plank cp3" data-speed="-.2"></div>
+      <div class="badge">
+        <svg viewBox="0 0 200 200" id="badgeSvg" aria-hidden="true"><defs><path id="circ" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0"/></defs><circle cx="100" cy="100" r="96" fill="#ffffff" stroke="#2f8a84" stroke-width="1.5"/><text font-size="13.5" letter-spacing="3.2" fill="#2f8a84" font-family="Georgia,serif"><textPath href="#circ">TURBO · INTERIOR · WOOD WORKS · TRICHY ·</textPath></text></svg>
+        <div class="core"><b>15</b><small>Years</small></div>
+      </div>
+    </div>
+    <div>
+      <span class="eyebrow reveal" data-ta="எங்களை பற்றி">About TURBO</span>
+      <h2 class="reveal" style="--dl:.1s" data-ta="பதினைந்து ஆண்டுகளாக மரத்தை <em>இல்லமாக</em> மாற்றுகிறோம்">Fifteen years of turning wood into <em>home</em></h2>
+      <p class="reveal" style="--dl:.2s">Based in Trichy, Tamil Nadu, TURBO Interior Design and Wood Works has spent 15 years designing and building interiors and wood works for homes. From a compact modular kitchen to a complete home interior, every piece is planned around your space, your budget and the way your family lives.</p>
+      <p class="reveal" style="--dl:.3s;margin-top:1rem">We work with plywood, solid wood and modern laminates and finishes, and we stay with your project from the first measurement to the final installation.</p>
+      <ul class="ticks reveal" style="--dl:.4s">
+        <li>Modular kitchens, wardrobes, cupboards &amp; pooja rooms</li>
+        <li>Staircases, plywood &amp; wood doors, custom furniture</li>
+        <li>Complete home interiors — designed as one coordinated look</li>
+      </ul>
+      <a href="#contact" class="btn dark reveal" style="--dl:.5s" data-mag data-ta="உங்கள் திட்டத்தை பற்றி பேசுவோம்">Talk about your project</a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES (pinned horizontal) -->
+<section class="hs" id="services">
+  <div class="hs-s">
+    <div class="hs-head">
+      <div>
+        <span class="eyebrow" data-ta="எங்கள் சேவைகள்">What we build</span>
+        <h2 data-ta="நாங்கள் உருவாக்கும் <em>எட்டு கலைகள்</em>">Eight crafts, <em>one workshop mindset</em></h2>
+      </div>
+      <div class="hs-count"><b id="hsN">01</b> <span>/ 08</span></div>
+    </div>
+    <div class="hs-t" id="hsT"></div>
+    <div class="hs-bar"><i id="hsP"></i></div>
+  </div>
+</section>
+
+<!-- STATS BAND -->
+<section class="band">
+  <div class="bg" data-speed=".22"></div>
+  <div class="plank bp1" data-speed="-.25"></div>
+  <div class="plank bp2" data-speed=".3"></div>
+  <div class="wrap">
+    <span class="eyebrow reveal">Crafted in Trichy</span>
+    <h2 class="reveal" style="--dl:.1s">Experience you can <em>see</em> in every joint and finish.</h2>
+    <div class="stats">
+      <div class="stat reveal"><b data-count="15" data-suffix="+">0</b><small>Years of experience</small></div>
+      <div class="stat reveal" style="--dl:.1s"><b data-count="8">0</b><small>Core services</small></div>
+      <div class="stat reveal" style="--dl:.2s"><b data-count="100" data-suffix="%">0</b><small>Custom-made work</small></div>
+      <div class="stat reveal" style="--dl:.3s"><b>1</b><small>Team, start to finish</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="pad light why-sec">
+  <div class="wrap center">
+    <span class="eyebrow reveal">Why TURBO</span>
+    <h2 class="reveal" style="--dl:.1s">Built around <em>you</em>, not a catalogue</h2>
+    <p class="lead reveal" style="--dl:.2s">Six reasons families in Trichy trust us with the most lived-in parts of their homes.</p>
+    <div class="why-g" style="text-align:left">
+      <article class="why reveal"><div class="n">01</div><h3>Made to measure</h3><p>Every unit is planned for your exact room — no awkward gaps, no wasted corners.</p></article>
+      <article class="why reveal" style="--dl:.1s"><div class="n">02</div><h3>Right material, right place</h3><p>We guide you on plywood, solid wood and finishes suited to kitchens, bedrooms and entrances.</p></article>
+      <article class="why reveal" style="--dl:.2s"><div class="n">03</div><h3>Precise, clean finishing</h3><p>Neat edges, aligned shutters and smooth hardware — the details that last for years.</p></article>
+      <article class="why reveal"><div class="n">04</div><h3>Design that fits your budget</h3><p>Clear options and honest advice so you can choose what matters most to you.</p></article>
+      <article class="why reveal" style="--dl:.1s"><div class="n">05</div><h3>15 years of know-how</h3><p>A decade and a half of experience in interiors and wood works across many home styles.</p></article>
+      <article class="why reveal" style="--dl:.2s"><div class="n">06</div><h3>Start-to-finish support</h3><p>From first measurement and design to installation — one point of contact throughout.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- FINISHES -->
+<section class="pad fin" id="finishes">
+  <div class="wrap fin-g">
+    <div>
+      <span class="eyebrow reveal" data-ta="மர வகைகள்">Wood finishes</span>
+      <h2 class="reveal" style="--dl:.1s" data-ta="உங்களுக்கு பிடித்த <em>பினிஷ்</em> தேர்வு செய்யுங்கள்">Pick a <em>finish</em> you love</h2>
+      <p class="lead reveal" style="--dl:.2s" data-ta="வண்ணத்தை தேர்வு செய்து, உங்கள் வார்ட்ரோப் மற்றும் கதவு எப்படி இருக்கும் என்று பாருங்கள்.">Choose a tone and watch the wardrobe and door change. We'll help you match it to your floor, walls and light.</p>
+      <div class="sw reveal" id="sw" style="--dl:.3s"></div>
+      <div class="fname" id="fname">Walnut</div>
+      <p class="fnote">Sample tones for preview — actual colour varies with material and lighting.</p>
+      <a href="#contact" class="btn gold" id="fReq" data-mag>Request this finish →</a>
+    </div>
+    <div class="fin-art reveal r">
+      <svg viewBox="0 0 420 360" role="img" aria-label="Wardrobe and door preview">
+        <defs><filter id="gr" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.35 0.012" numOctaves="3" seed="7"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.5 0 0 0 -.5"/></filter></defs>
+        <rect x="0" y="332" width="420" height="28" fill="rgba(29,43,47,.08)"/>
+        <rect class="fin-c" x="30" y="30" width="230" height="302" rx="6"/>
+        <rect class="gr" x="30" y="30" width="230" height="302" filter="url(#gr)"/>
+        <path class="ln" d="M145 30v302M30 108h230M38 322h214"/>
+        <rect class="br" x="132" y="190" width="6" height="46" rx="3"/><rect class="br" x="152" y="190" width="6" height="46" rx="3"/>
+        <rect class="fin-c" x="290" y="60" width="104" height="272" rx="4"/>
+        <rect class="gr" x="290" y="60" width="104" height="272" filter="url(#gr)"/>
+        <rect class="ln" x="302" y="74" width="80" height="108" rx="3"/><rect class="ln" x="302" y="196" width="80" height="122" rx="3"/>
+        <circle class="br" cx="378" cy="196" r="6"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="pad proc" id="process">
+  <div class="wrap center">
+    <span class="eyebrow reveal" data-ta="செயல்முறை">How we work</span>
+    <h2 class="reveal" style="--dl:.1s" data-ta="யோசனையிலிருந்து <em>இல்லம்</em> வரை">From idea to <em>installed</em></h2>
+    <div class="tl" id="tl">
+      <div class="tl-fill"></div>
+      <div class="tl-item"><span class="tl-dot">1</span><div class="tl-card"><h3>Consult &amp; measure</h3><p>We visit, listen to your needs and take precise measurements of your space.</p></div></div>
+      <div class="tl-item"><span class="tl-dot">2</span><div class="tl-card"><h3>Design &amp; plan</h3><p>Layouts, materials and finishes are shaped into a clear plan and quotation.</p></div></div>
+      <div class="tl-item"><span class="tl-dot">3</span><div class="tl-card"><h3>Choose materials</h3><p>Pick plywood, wood, laminates, hardware and tones that suit your budget.</p></div></div>
+      <div class="tl-item"><span class="tl-dot">4</span><div class="tl-card"><h3>Craft &amp; build</h3><p>Skilled carpenters cut, join and finish every piece with care.</p></div></div>
+      <div class="tl-item"><span class="tl-dot">5</span><div class="tl-card"><h3>Install &amp; handover</h3><p>Neat installation, final checks and a handover you can be proud of.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="pad light mist" id="contact">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow reveal" data-ta="தொடர்புக்கு">Get in touch</span>
+      <h2 class="reveal" style="--dl:.1s" data-ta="உங்கள் கனவு இல்லத்தை <em>தொடங்கலாம்</em>">Let's start your <em>dream interior</em></h2>
+      <p class="lead reveal" style="--dl:.2s">Tell us what you'd like to build. We'll get back to you with the next steps and a free quote.</p>
+    </div>
+    <div class="contact-g">
+      <div class="info">
+        <div class="ic reveal l"><i>📍</i><div><small>Location</small><b>Trichy (Tiruchirappalli), Tamil Nadu</b></div></div>
+        <a class="ic reveal l" style="--dl:.1s" data-tel href="#"><i>📞</i><div><small>Call us</small><b data-phone>+91 XXXXX XXXXX</b></div></a>
+        <a class="ic reveal l" style="--dl:.2s" data-wa target="_blank" rel="noopener" href="#"><i>💬</i><div><small>WhatsApp</small><b>Chat with us</b></div></a>
+        <a class="ic reveal l" style="--dl:.3s" data-mail href="#"><i>✉️</i><div><small>Email</small><b data-email>info@yourdomain.com</b></div></a>
+        <a class="ic reveal l" style="--dl:.4s" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Turbo+Interior+Design+and+Wood+Works+Trichy"><i>🗺️</i><div><small>Find us</small><b>Open in Google Maps</b></div></a>
+      </div>
+      <form class="enq reveal r" id="enq" novalidate>
+        <h3 data-ta="இலவச மதிப்பீடு கோரவும்">Request a free quote</h3>
+        <div class="row2">
+          <div class="fld"><label for="fn">Your name</label><input id="fn" required maxlength="60" autocomplete="name" placeholder="Name"></div>
+          <div class="fld"><label for="fp">Phone</label><input id="fp" required type="tel" inputmode="tel" maxlength="15" autocomplete="tel" placeholder="Mobile number"></div>
+        </div>
+        <div class="fld"><label for="fs">I'm interested in</label><select id="fs"></select></div>
+        <div class="fld"><label for="fm">Tell us more</label><textarea id="fm" maxlength="400" placeholder="Room size, budget, ideas…"></textarea></div>
+        <button class="btn gold" type="submit" data-mag>Send enquiry on WhatsApp →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fg">
+      <div>
+        <a href="#home" class="logo" style="margin-bottom:1rem"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="1" y="1" width="46" height="46" rx="12" fill="#2f8a84"/><path d="M10 14h28v7H27v14h-6V21H10z" fill="#ffffff"/></svg><span><b>TURBO</b><small>Interior Design & Wood Works</small></span></a>
+        <p style="max-width:340px">15 years of crafting modular kitchens, wardrobes, doors, staircases and complete home interiors in Trichy, Tamil Nadu.</p>
+      </div>
+      <div><h4>Services</h4><div id="fsv"></div></div>
+      <div><h4>Quick links</h4><a href="#about">About</a><a href="#services">Services</a><a href="#finishes">Finishes</a><a href="#process">Process</a><a href="#contact">Contact</a></div>
+    </div>
+    <div class="copy"><span>© <span id="yr"></span> TURBO Interior Design &amp; Wood Works, Trichy. All rights reserved.</span><span>Crafted with care in Tamil Nadu</span></div>
+  </div>
+</footer>
+
+<a class="fab" id="wa" data-wa target="_blank" rel="noopener" href="#" aria-label="Chat on WhatsApp"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7a11.700 11.700 0 0 1-4.600-4c-.4-.5-1.100-1.600-1.100-2.900s.7-1.900.9-2.200c.2-.3.500-.3.700-.3h.5c.2 0 .4 0 .6.500l.8 2c.1.200.1.400 0 .5l-.3.500-.4.400c-.1.200-.3.300-.1.600.2.300.7 1.200 1.500 1.900 1 .9 1.900 1.200 2.200 1.300.3.100.4.100.6-.1l.8-1c.2-.3.4-.2.600-.1l1.900.9c.3.100.5.200.5.300.1.200.1.800-.1 1.200z"/></svg></a>
+<button class="fab" id="top" aria-label="Back to top">↑</button>
+<div class="mbar"><a class="c" data-tel href="#">📞 Call now</a><a class="w" data-wa target="_blank" rel="noopener" href="#">💬 WhatsApp</a></div>
+<div id="toast" role="status"></div>
+
+<script>
+(()=>{
+"use strict";
+/* ====== EDIT THESE: your real contact details ====== */
+const CONFIG={
+  whatsapp:"91XXXXXXXXXX",          // country code + number, digits only (e.g. 919876543210)
+  phoneDisplay:"+91 XXXXX XXXXX",
+  email:"info@yourdomain.com"
+};
+/* =================================================== */
+const $=(s,c=document)=>c.querySelector(s),$$=(s,c=document)=>[...c.querySelectorAll(s)];
+const clamp=(v,a,b)=>Math.min(b,Math.max(a,v));
+const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+const fine=matchMedia("(hover:hover) and (pointer:fine)").matches;
+const phoneOK=!/X/i.test(CONFIG.whatsapp);
+let tt;const toast=m=>{const t=$("#toast");t.textContent=m;t.classList.add("show");clearTimeout(tt);tt=setTimeout(()=>t.classList.remove("show"),3200)};
+$("#yr").textContent=new Date().getFullYear();
+
+/* contact links */
+$$("[data-phone]").forEach(e=>e.textContent=CONFIG.phoneDisplay);
+$$("[data-email]").forEach(e=>e.textContent=CONFIG.email);
+$$("[data-tel]").forEach(a=>a.href=phoneOK?"tel:+"+CONFIG.whatsapp:"#contact");
+$$("[data-mail]").forEach(a=>a.href="mailto:"+CONFIG.email);
+$$("[data-wa]").forEach(a=>{a.href=phoneOK?`https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent("Hello TURBO, I'd like to enquire about interior / wood work.")}`:"#contact";if(!phoneOK){a.removeAttribute("target")}});
+
+/* services data */
+const S=[
+ {en:"Modular Kitchen",ta:"மாடுலர் கிச்சன்",d:"Smart, ergonomic layouts with soft-close drawers, tall units and durable finishes — planned around the way you cook.",b:["L-shape, U-shape, parallel & island layouts","Soft-close hardware & pull-out storage","Moisture-resistant plywood options"],
+  svg:`<g class="f"><rect x="22" y="22" width="196" height="46" rx="3"/><rect x="22" y="108" width="196" height="54" rx="3"/></g><path class="l" d="M82 22v46M142 22v46M22 108v54M82 108v54M142 108v54M22 98h196"/><path class="f2" d="M74 12h92l-14 10H88z"/><circle class="b" cx="106" cy="92" r="4"/><circle class="b" cx="134" cy="92" r="4"/><path class="l" d="M70 90v6M170 90v6M64 130h12M124 130h12M184 130h12"/>`},
+ {en:"Cupboard Works",ta:"அலமாரி வேலைகள்",d:"Space-saving cupboards for living rooms, bedrooms and utility areas — built to your exact measurements.",b:["Sliding & hinged shutters","Loft & corner solutions","Laminate, veneer & acrylic finishes"],
+  svg:`<g class="f"><rect x="30" y="16" width="180" height="150" rx="4"/></g><path class="l" d="M90 16v150M150 16v150M30 62h180"/><circle class="b" cx="82" cy="110" r="3.5"/><circle class="b" cx="98" cy="110" r="3.5"/><circle class="b" cx="142" cy="110" r="3.5"/><circle class="b" cx="158" cy="110" r="3.5"/><path class="l" d="M42 40h36M102 40h36M162 40h36"/>`},
+ {en:"Home Interior",ta:"வீட்டு உள்அலங்காரம்",d:"Complete interiors — TV units, paneling, partitions and furniture — designed as one coordinated look for your whole home.",b:["Living, bedroom & dining interiors","TV units, paneling & partitions","Lighting-friendly design planning"],
+  svg:`<g class="f"><rect x="34" y="104" width="130" height="38" rx="8"/><rect x="44" y="82" width="110" height="30" rx="8"/></g><path class="l" d="M52 142v14M146 142v14"/><rect class="f2" x="70" y="26" width="60" height="38" rx="2"/><path class="l" d="M78 56l14-14 10 10 12-14 10 18"/><path class="l" d="M196 52v100M184 152h24"/><path class="f2" d="M180 52l16-24 16 24z"/><circle class="b" cx="196" cy="20" r="3"/>`},
+ {en:"Custom Plywood & Wood Works",ta:"கஸ்டம் ப்ளைவுட் & மர வேலைகள்",d:"Bespoke furniture and fittings cut, joined and finished by skilled carpenters — from beds and study tables to shelves and units.",b:["Beds, tables, shelves & storage units","Teak, plywood & engineered wood","Made to your design or ours"],
+  svg:`<g class="f"><rect x="40" y="108" width="160" height="16" rx="2"/><rect x="48" y="84" width="160" height="16" rx="2"/><rect x="34" y="132" width="160" height="16" rx="2"/></g><path class="l" d="M40 116h160M48 92h160M34 140h160"/><path class="l" d="M168 30l24 24M180 22l-30 30 12 12 30-30z"/><circle class="b" cx="72" cy="56" r="4"/>`},
+ {en:"Staircase",ta:"படிக்கட்டு",d:"Wooden staircases and railings that turn a passage into a statement — safe, solid and beautifully detailed.",b:["Wooden treads & risers","Handrails & balusters","Straight, L-shape & U-shape designs"],
+  svg:`<path class="f" d="M24 156h46v-26h44v-26h44v-26h44v-26h14v104z"/><path class="l" d="M24 156h46v-26h44v-26h44v-26h44v-26"/><path class="l" d="M30 130l170-92"/><path class="l" d="M60 128v-26M100 108v-26M140 88v-26M180 68v-26"/><circle class="b" cx="200" cy="38" r="4"/>`},
+ {en:"Wardrobes",ta:"வார்ட்ரோப்",d:"Walk-in, sliding and hinged wardrobes organised with shelves, drawers, hanging space and lofts.",b:["Sliding & hinged doors","Internal drawers, shelves & hanging rails","Full-height & loft designs"],
+  svg:`<g class="f"><rect x="50" y="12" width="140" height="156" rx="4"/></g><path class="l" d="M120 44v124M50 44h140M58 160h124"/><rect class="b" x="110" y="96" width="4" height="30" rx="2"/><rect class="b" x="126" y="96" width="4" height="30" rx="2"/><path class="l" d="M62 26h48M130 26h48"/>`},
+ {en:"Pooja Room",ta:"பூஜை அறை",d:"Serene, traditional pooja units and mandapams crafted in wood — designed with reverence and good proportions.",b:["Wall-mounted & floor-standing units","Carved & minimalist styles","Space for lamps, idols & storage"],
+  svg:`<path class="f" d="M62 164V74a58 58 0 0 1 116 0v90z"/><path class="l" d="M78 164V76a42 42 0 0 1 84 0v88"/><path class="f2" d="M52 164h136v10H52z"/><path class="b" d="M120 112c-8 8-8 16 0 20 8-4 8-12 0-20z"/><path class="l" d="M104 140h32M120 14v14"/><circle class="b" cx="120" cy="34" r="3"/><path class="l" d="M96 56l24-14 24 14"/>`},
+ {en:"Plywood & Wood Doors",ta:"ப்ளைவுட் & மரக் கதவுகள்",d:"Main doors, bedroom doors and frames in solid wood and plywood — built for strength and a lasting finish.",b:["Main entrance & internal doors","Door frames & panelling","Flush, panel & carved designs"],
+  svg:`<g class="f"><rect x="66" y="8" width="108" height="160" rx="3"/></g><rect class="l" x="80" y="22" width="80" height="54" rx="2"/><rect class="l" x="80" y="88" width="80" height="68" rx="2"/><circle class="b" cx="152" cy="84" r="5"/><path class="l" d="M56 168h128"/>`}
+];
+const hsT=$("#hsT");
+hsT.innerHTML=S.map((s,i)=>`<article class="panel"><div class="art"><span class="pn">0${i+1}</span><svg viewBox="0 0 240 180" aria-hidden="true">${s.svg}</svg></div><div class="ptxt"><h3 data-ta="${s.ta}">${s.en}</h3><p>${s.d}</p><ul>${s.b.map(x=>`<li>${x}</li>`).join("")}</ul><div><a href="#contact" class="btn gold sm" data-svc="${s.en}" data-ta="இதை பற்றி கேளுங்கள் →">Enquire about this →</a></div></div></article>`).join("");
+$("#mq").innerHTML=[...S,...S].map(s=>`<span>◆ ${s.en}</span>`).join("");
+$("#fs").innerHTML=S.map(s=>`<option>${s.en}</option>`).join("")+"<option>Other / Not sure</option>";
+$("#fsv").innerHTML=S.map(s=>`<a href="#services">${s.en}</a>`).join("");
+hsT.addEventListener("click",e=>{const a=e.target.closest("[data-svc]");if(a)$("#fs").value=a.dataset.svc});
+
+/* language */
+function setLang(l){
+  $$("[data-ta]").forEach(el=>{if(!el.dataset.en)el.dataset.en=el.innerHTML;el.innerHTML=l==="ta"?el.dataset.ta:el.dataset.en});
+  document.documentElement.lang=l==="ta"?"ta":"en";$("#lang").textContent=l==="ta"?"EN":"தமிழ்";
+  try{localStorage.setItem("turbo_lang",l)}catch(_){}
+  sizeHS();
+}
+let lang="en";try{lang=localStorage.getItem("turbo_lang")||"en"}catch(_){}
+if(lang==="ta")setLang("ta");
+$("#lang").onclick=()=>{lang=lang==="ta"?"en":"ta";setLang(lang)};
+
+/* nav */
+const hdr=$("#hdr"),burger=$("#burger"),links=$("#links");
+burger.onclick=()=>{burger.classList.toggle("open");links.classList.toggle("open")};
+$$("a",links).forEach(a=>a.addEventListener("click",()=>{burger.classList.remove("open");links.classList.remove("open")}));
+const secs=["about","services","finishes","process","contact"].map(id=>$("#"+id));
+const navIO=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)$$("a",links).forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+e.target.id))}),{rootMargin:"-45% 0px -50% 0px"});
+secs.forEach(s=>navIO.observe(s));
+
+/* loader */
+let readied=false;const ready=()=>{if(readied)return;readied=true;document.body.classList.add("ready")};
+addEventListener("load",()=>setTimeout(ready,1300));setTimeout(ready,3000);
+
+/* reveal + counters */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12,rootMargin:"0px 0px -5% 0px"});
+$$(".reveal").forEach(el=>io.observe(el));
+const cio=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;cio.unobserve(e.target);
+  const el=e.target,to=+el.dataset.count,sfx=el.dataset.suffix||"",t0=performance.now();
+  const f=t=>{const k=clamp((t-t0)/1800,0,1);el.textContent=Math.round(to*(1-Math.pow(1-k,4)))+sfx;if(k<1)requestAnimationFrame(f)};requestAnimationFrame(f)}),{threshold:.6});
+$$("[data-count]").forEach(el=>cio.observe(el));
+
+/* dust particles */
+const hero=$("#home"),cv=$("#dust"),cx=cv.getContext("2d");let W=0,H=0,P=[],heroVis=true;
+function rs(){W=cv.width=hero.offsetWidth;H=cv.height=hero.offsetHeight;P=Array.from({length:Math.min(70,Math.floor(W/16))},()=>({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.8+.4,vx:(Math.random()-.5)*.25,vy:-Math.random()*.3-.05,a:Math.random()*.5+.15}))}
+new IntersectionObserver(e=>heroVis=e[0].isIntersecting).observe(hero);
+(function loop(){if(heroVis&&!reduce){cx.clearRect(0,0,W,H);for(const p of P){p.x+=p.vx;p.y+=p.vy;if(p.y<-6){p.y=H+6;p.x=Math.random()*W}cx.beginPath();cx.fillStyle=`rgba(47,138,132,${p.a*.6})`;cx.arc(p.x,p.y,p.r,0,6.283);cx.fill()}}requestAnimationFrame(loop)})();
+
+/* mouse parallax / spotlight / magnetic / tilt */
+$$("[data-depth]").forEach(el=>el.style.setProperty("--d",el.dataset.depth));
+if(fine&&!reduce){
+  hero.addEventListener("pointermove",e=>{const r=hero.getBoundingClientRect();hero.style.setProperty("--mx",((e.clientX-r.left)/r.width-.5)*2);hero.style.setProperty("--my",((e.clientY-r.top)/r.height-.5)*2)});
+  hero.addEventListener("pointerleave",()=>{hero.style.setProperty("--mx",0);hero.style.setProperty("--my",0)});
+  const sp=$("#spot");addEventListener("pointermove",e=>{sp.style.transform=`translate3d(${e.clientX-240}px,${e.clientY-240}px,0)`},{passive:true});
+  $$("[data-mag]").forEach(b=>{b.addEventListener("pointermove",e=>{const r=b.getBoundingClientRect();b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.25}px,${(e.clientY-r.top-r.height/2)*.35}px)`});b.addEventListener("pointerleave",()=>b.style.transform="")});
+  $$(".why").forEach(c=>{c.addEventListener("pointermove",e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;c.style.setProperty("--x",x*100+"%");c.style.setProperty("--y",y*100+"%");c.style.transform=`perspective(800px) rotateX(${(.5-y)*7}deg) rotateY(${(x-.5)*9}deg) translateY(-4px)`});c.addEventListener("pointerleave",()=>c.style.transform="")});
+}
+
+/* finish picker */
+const FIN=[["Walnut","#5a3a24"],["Teak","#9a6a3a"],["Natural Oak","#c9a36a"],["Birch","#e6cfa8"],["Rosewood","#6e2d24"],["Ash White","#d9cfbf"]];
+const sw=$("#sw");
+sw.innerHTML=FIN.map((f,i)=>`<button type="button" style="--c:${f[1]}" data-i="${i}" aria-label="${f[0]}" class="${i?"":"on"}"></button>`).join("");
+let finSel=FIN[0][0];
+sw.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;const f=FIN[b.dataset.i];
+  $$("button",sw).forEach(x=>x.classList.toggle("on",x===b));
+  document.documentElement.style.setProperty("--fin",f[1]);$("#fname").textContent=f[0];finSel=f[0]});
+document.documentElement.style.setProperty("--fin",FIN[0][1]);
+$("#fReq").addEventListener("click",()=>{$("#fm").value=`I'd like to know more about the ${finSel} finish.`});
+
+/* scroll engine */
+const pxEls=$$("[data-speed]"),prog=$("#progress"),topB=$("#top"),badge=$("#badgeSvg");
+const hs=$("#services"),hsP=$("#hsP"),hsN=$("#hsN"),panels=$$(".panel"),tl=$("#tl"),tlItems=$$(".tl-item");
+let hsDist=0;
+function sizeHS(){hsDist=Math.max(0,hsT.scrollWidth-innerWidth);hs.style.height=(hsDist+innerHeight)+"px"}
+let tick=false;
+function update(){
+  tick=false;const y=scrollY,vh=innerHeight,max=document.documentElement.scrollHeight-vh;
+  prog.style.transform=`scaleX(${max>0?y/max:0})`;
+  hdr.classList.toggle("scrolled",y>40);topB.classList.toggle("show",y>vh*.8);
+  if(!reduce){
+    for(const el of pxEls){const p=el.parentElement.getBoundingClientRect();if(p.bottom<-300||p.top>vh+300)continue;
+      el.style.setProperty("--sy",((p.top+p.height/2-vh/2)*parseFloat(el.dataset.speed)).toFixed(1))}
+    if(badge)badge.style.transform=`rotate(${y*.12}deg)`;
+  }
+  /* horizontal services */
+  const r=hs.getBoundingClientRect(),p=clamp(-r.top/(r.height-vh||1),0,1);
+  hsT.style.transform=`translate3d(${-p*hsDist}px,0,0)`;hsP.parentElement.style.setProperty("--p",p);hsP.style.setProperty("--p",p);
+  let best=0,bd=1e9;
+  panels.forEach((pn,i)=>{const b=pn.getBoundingClientRect(),o=b.left+b.width/2-innerWidth/2;if(!reduce)pn.style.setProperty("--ax",(-o*.08).toFixed(1)+"px");const d=Math.abs(o);if(d<bd){bd=d;best=i}});
+  hsN.textContent="0"+(best+1);
+  /* timeline */
+  const t=tl.getBoundingClientRect(),tp=clamp((vh*.62-t.top)/t.height,0,1);tl.style.setProperty("--p",tp);
+  tlItems.forEach(it=>it.classList.toggle("on",it.getBoundingClientRect().top<vh*.62));
+}
+const req=()=>{if(!tick){tick=true;requestAnimationFrame(update)}};
+addEventListener("scroll",req,{passive:true});
+addEventListener("resize",()=>{rs();sizeHS();req()});
+$("#top").onclick=()=>scrollTo({top:0,behavior:"smooth"});
+
+/* enquiry form -> WhatsApp */
+$("#enq").addEventListener("submit",e=>{e.preventDefault();
+  const n=$("#fn").value.trim(),p=$("#fp").value.trim(),s=$("#fs").value,m=$("#fm").value.trim();
+  if(!n||!/^[+\d][\d\s-]{6,}$/.test(p)){toast("Please enter your name and a valid phone number.");return}
+  const text=`Hello TURBO,%0AName: ${encodeURIComponent(n)}%0APhone: ${encodeURIComponent(p)}%0AInterested in: ${encodeURIComponent(s)}%0A${encodeURIComponent(m||"")}`;
+  if(!phoneOK){toast("Thank you! (Set your WhatsApp number in the CONFIG block of index.htm to receive enquiries.)");return}
+  window.open(`https://wa.me/${CONFIG.whatsapp}?text=${text}`,"_blank","noopener");toast("Opening WhatsApp…");e.target.reset()});
+
+rs();sizeHS();update();
+addEventListener("load",()=>{rs();sizeHS();update()});
+})();
+</script>
+</body>
+</html>

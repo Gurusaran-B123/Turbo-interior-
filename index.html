@@ -205,7 +205,7 @@ body.ready .hin{opacity:1;transform:none}
 .fin-art{border-radius:30px;padding:clamp(1rem,3vw,2rem);background:radial-gradient(circle at 50% 30%,rgba(95,184,174,.22),transparent 70%),#fff;border:1px solid var(--line);box-shadow:0 36px 80px rgba(47,138,132,.18)}
 .fin-art svg{width:100%;height:auto}
 .fin-art .fin-c{fill:var(--fin,#5a3a24);transition:fill .7s var(--ease)}
-.fin-art .gr{opacity:.4;mix-blend-mode:multiply}
+.fin-art .gr{opacity:var(--gro,.55);mix-blend-mode:multiply;transition:opacity .5s}
 .fin-art .ln{fill:none;stroke:rgba(0,0,0,.35);stroke-width:1.5}
 .fin-art .br{fill:#2b3a3e}
 
@@ -228,8 +228,6 @@ body.ready .hin{opacity:1;transform:none}
 .tl-item.on .tl-card{opacity:1;transform:none}
 
 /* contact */
-.contact-g{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(2rem,5vw,4rem);align-items:start;margin-top:3rem}
-.info{display:grid;gap:1rem}
 .ic{display:flex;gap:1rem;align-items:center;padding:1.1rem 1.3rem;border-radius:18px;background:#fff;border:1px solid var(--line);transition:transform .35s var(--ease),box-shadow .35s}
 .ic:hover{transform:translateX(8px);box-shadow:0 14px 34px rgba(47,138,132,.15)}
 .ic i{flex:none;width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,#d3eee9,#fde2d2);font-style:normal;font-size:1.2rem}
@@ -243,6 +241,70 @@ form.enq h3{font-size:1.6rem;color:var(--teal)}
 .fld input:focus,.fld select:focus,.fld textarea:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(95,184,174,.25);background:#fff}
 .row2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
 .fld textarea{min-height:100px;resize:vertical}
+
+.marq-wrap{overflow-x:clip;position:relative;z-index:5}
+/* logo image */
+.logo-img{display:none;height:50px;width:auto;max-width:210px;object-fit:contain}
+.logo.has-img .logo-img{display:block}
+.logo.has-img:not(.keeptxt) .logo-txt{display:none}
+.logo.has-img.keeptxt{gap:.7rem}
+.logo.foot .logo-img{height:56px}
+
+/* about photo */
+.ab-wrap{position:relative;max-width:520px;width:100%;margin-inline:auto}
+.ab-img{position:relative;aspect-ratio:4/5;border-radius:999px 999px 28px 28px;overflow:hidden;background:linear-gradient(160deg,var(--sky),var(--peach));box-shadow:0 30px 70px rgba(47,138,132,.2);border:1px solid var(--line)}
+.ab-img img{position:absolute;left:0;top:-7%;width:100%;height:114%;object-fit:cover;opacity:0;transition:opacity .6s}
+.ab-img.has-img img{opacity:1}
+.ab-img.has-img .ab-fb{display:none}
+.ab-fb{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--serif);font-weight:900;font-size:clamp(3rem,9vw,5.5rem);letter-spacing:.06em;color:rgba(47,138,132,.25)}
+.ab-wrap .badge{position:absolute;right:-6%;bottom:5%;width:36%;z-index:2}
+.ab-wrap .badge svg{filter:drop-shadow(0 12px 22px rgba(29,43,47,.22))}
+
+/* service photos */
+.art img{position:absolute;top:0;left:-12%;width:124%;height:100%;object-fit:cover;opacity:0;transform:translateX(var(--ax,0));transition:opacity .6s,transform .15s linear}
+.art.has-img{padding:0;background:var(--mist)}
+.art.has-img img{opacity:1}
+.art.has-img svg{display:none}
+.art.has-img .pn{z-index:2;-webkit-text-stroke:1px #fff;text-shadow:0 2px 16px rgba(0,0,0,.35)}
+
+/* colour palette */
+.sw-wrap{margin:1.4rem 0 1rem;display:grid;gap:1.3rem}
+.sw-grp h4{font-family:var(--sans);font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);margin-bottom:.7rem;font-weight:700}
+.sw-grp .sw{margin:0;gap:.65rem}
+.sw button{width:44px;height:44px}
+.sw button.wd{background:repeating-linear-gradient(97deg,rgba(0,0,0,.1) 0 2px,transparent 2px 6px),repeating-linear-gradient(83deg,rgba(255,255,255,.14) 0 1px,transparent 1px 9px),var(--c)}
+
+/* founder */
+.contact-g{margin-top:3rem}
+.info{display:grid;grid-template-columns:repeat(6,1fr);gap:1rem}
+.info>*{grid-column:span 2}
+.info>*:nth-child(n+4){grid-column:span 3}
+.founder{display:grid;grid-template-columns:.8fr 1.2fr;border-radius:32px;border:1px solid var(--line);overflow:hidden;background:#fff;box-shadow:0 30px 70px rgba(47,138,132,.16);margin-top:3.5rem}
+.fo-img{position:relative;min-height:400px;background:linear-gradient(160deg,var(--sky),var(--peach));overflow:hidden}
+.fo-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;opacity:0;transition:opacity .6s}
+.fo-img.has-img img{opacity:1}
+.fo-img.has-img .fo-fb{display:none}
+.fo-fb{position:absolute;inset:0;display:grid;place-items:center}
+.fo-fb svg{width:46%;height:auto;opacity:.35}
+.fo-body{padding:clamp(1.6rem,4vw,3.4rem);display:flex;flex-direction:column;justify-content:center;gap:.9rem}
+.fo-name{font-size:clamp(1.6rem,3.2vw,2.4rem)}
+.qm{font-family:var(--serif);font-size:4.5rem;line-height:.5;color:var(--coral);height:2rem}
+.fo-q{font-family:var(--serif);font-size:clamp(1.15rem,2.2vw,1.65rem);line-height:1.4;color:var(--ink)}
+.fo-sig{font-weight:700;color:var(--teal);display:flex;align-items:center;gap:.8rem;margin-top:.4rem}
+.fo-sig::before{content:"";width:40px;height:2px;background:var(--coral)}
+.proc,#about{overflow-x:clip}
+@media(max-width:1000px){
+  .ab-wrap{max-width:440px}
+  .info{grid-template-columns:1fr 1fr}
+  .info>*,.info>*:nth-child(n+4){grid-column:auto}
+  .info>*:last-child{grid-column:1/-1}
+  .founder{grid-template-columns:1fr}
+  .fo-img{min-height:0;aspect-ratio:4/4.2}
+}
+@media(max-width:620px){
+  .info{grid-template-columns:1fr}
+  .ab-wrap .badge{right:-2%;width:32%}
+}
 
 /* footer */
 footer{background:#e3eee9;padding:4rem 0 1.6rem;border-top:1px solid var(--line)}
@@ -326,9 +388,9 @@ footer{background:#e3eee9;padding:4rem 0 1.6rem;border-top:1px solid var(--line)
 
 <header id="hdr">
   <div class="wrap nav">
-    <a href="#home" class="logo" aria-label="TURBO home">
-      <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="1" y="1" width="46" height="46" rx="12" fill="#2f8a84"/><path d="M10 14h28v7H27v14h-6V21H10z" fill="#ffffff"/></svg>
-      <span><b>TURBO</b><small>Interior Design & Wood Works</small></span>
+    <a href="#home" class="logo" aria-label="TURBO Interior Design & Wood Works — home">
+      <img class="logo-img" data-img="logoin" data-ext="png,jpg,jpeg,webp,svg" alt="TURBO Interior Design & Wood Works logo">
+      <span class="logo-txt"><b>TURBO</b><small>Interior Design & Wood Works</small></span>
     </a>
     <nav class="links" id="links">
       <a href="#about" data-ta="எங்களை பற்றி">About</a>
@@ -374,15 +436,16 @@ footer{background:#e3eee9;padding:4rem 0 1.6rem;border-top:1px solid var(--line)
   <div class="scrollcue">Scroll</div>
 </section>
 
-<div class="marq" aria-hidden="true"><div class="mq" id="mq"></div></div>
+<div class="marq-wrap"><div class="marq" aria-hidden="true"><div class="mq" id="mq"></div></div></div>
 
 <!-- ABOUT -->
 <section class="pad light" id="about">
   <div class="wrap about-g">
-    <div class="collage curtain reveal">
-      <div class="plank cp1" data-speed="-.12"></div>
-      <div class="plank cp2" data-speed=".1"></div>
-      <div class="plank cp3" data-speed="-.2"></div>
+    <div class="ab-wrap reveal l">
+      <div class="ab-img">
+        <img data-img="about" alt="TURBO Interior Design and Wood Works, Trichy" data-speed=".06" loading="lazy">
+        <div class="ab-fb" aria-hidden="true">TURBO</div>
+      </div>
       <div class="badge">
         <svg viewBox="0 0 200 200" id="badgeSvg" aria-hidden="true"><defs><path id="circ" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0"/></defs><circle cx="100" cy="100" r="96" fill="#ffffff" stroke="#2f8a84" stroke-width="1.5"/><text font-size="13.5" letter-spacing="3.2" fill="#2f8a84" font-family="Georgia,serif"><textPath href="#circ">TURBO · INTERIOR · WOOD WORKS · TRICHY ·</textPath></text></svg>
         <div class="core"><b>15</b><small>Years</small></div>
@@ -459,8 +522,8 @@ footer{background:#e3eee9;padding:4rem 0 1.6rem;border-top:1px solid var(--line)
       <span class="eyebrow reveal" data-ta="மர வகைகள்">Wood finishes</span>
       <h2 class="reveal" style="--dl:.1s" data-ta="உங்களுக்கு பிடித்த <em>பினிஷ்</em> தேர்வு செய்யுங்கள்">Pick a <em>finish</em> you love</h2>
       <p class="lead reveal" style="--dl:.2s" data-ta="வண்ணத்தை தேர்வு செய்து, உங்கள் வார்ட்ரோப் மற்றும் கதவு எப்படி இருக்கும் என்று பாருங்கள்.">Choose a tone and watch the wardrobe and door change. We'll help you match it to your floor, walls and light.</p>
-      <div class="sw reveal" id="sw" style="--dl:.3s"></div>
-      <div class="fname" id="fname">Walnut</div>
+      <div class="sw-wrap reveal" id="swWrap" style="--dl:.3s"></div>
+      <div class="fname" id="fname">Walnut · Wood</div>
       <p class="fnote">Sample tones for preview — actual colour varies with material and lighting.</p>
       <a href="#contact" class="btn gold" id="fReq" data-mag>Request this finish →</a>
     </div>
@@ -503,27 +566,30 @@ footer{background:#e3eee9;padding:4rem 0 1.6rem;border-top:1px solid var(--line)
     <div class="center">
       <span class="eyebrow reveal" data-ta="தொடர்புக்கு">Get in touch</span>
       <h2 class="reveal" style="--dl:.1s" data-ta="உங்கள் கனவு இல்லத்தை <em>தொடங்கலாம்</em>">Let's start your <em>dream interior</em></h2>
-      <p class="lead reveal" style="--dl:.2s">Tell us what you'd like to build. We'll get back to you with the next steps and a free quote.</p>
+      <p class="lead reveal" style="--dl:.2s">Call, message or visit us — we'd love to hear about your project and give you a free quote.</p>
     </div>
     <div class="contact-g">
       <div class="info">
-        <div class="ic reveal l"><i>📍</i><div><small>Location</small><b>Trichy (Tiruchirappalli), Tamil Nadu</b></div></div>
-        <a class="ic reveal l" style="--dl:.1s" data-tel href="#"><i>📞</i><div><small>Call us</small><b data-phone>+91 XXXXX XXXXX</b></div></a>
-        <a class="ic reveal l" style="--dl:.2s" data-wa target="_blank" rel="noopener" href="#"><i>💬</i><div><small>WhatsApp</small><b>Chat with us</b></div></a>
-        <a class="ic reveal l" style="--dl:.3s" data-mail href="#"><i>✉️</i><div><small>Email</small><b data-email>info@yourdomain.com</b></div></a>
-        <a class="ic reveal l" style="--dl:.4s" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Turbo+Interior+Design+and+Wood+Works+Trichy"><i>🗺️</i><div><small>Find us</small><b>Open in Google Maps</b></div></a>
+        <div class="ic reveal"><i>📍</i><div><small>Location</small><b>Trichy (Tiruchirappalli), Tamil Nadu</b></div></div>
+        <a class="ic reveal" style="--dl:.1s" data-tel href="#"><i>📞</i><div><small>Call us</small><b data-phone>+91 XXXXX XXXXX</b></div></a>
+        <a class="ic reveal" style="--dl:.2s" data-wa target="_blank" rel="noopener" href="#"><i>💬</i><div><small>WhatsApp</small><b>Chat with us</b></div></a>
+        <a class="ic reveal" style="--dl:.3s" data-mail href="#"><i>✉️</i><div><small>Email</small><b data-email>info@yourdomain.com</b></div></a>
+        <a class="ic reveal" style="--dl:.4s" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Turbo+Interior+Design+and+Wood+Works+Trichy"><i>🗺️</i><div><small>Find us</small><b>Open in Google Maps</b></div></a>
       </div>
-      <form class="enq reveal r" id="enq" novalidate>
-        <h3 data-ta="இலவச மதிப்பீடு கோரவும்">Request a free quote</h3>
-        <div class="row2">
-          <div class="fld"><label for="fn">Your name</label><input id="fn" required maxlength="60" autocomplete="name" placeholder="Name"></div>
-          <div class="fld"><label for="fp">Phone</label><input id="fp" required type="tel" inputmode="tel" maxlength="15" autocomplete="tel" placeholder="Mobile number"></div>
-        </div>
-        <div class="fld"><label for="fs">I'm interested in</label><select id="fs"></select></div>
-        <div class="fld"><label for="fm">Tell us more</label><textarea id="fm" maxlength="400" placeholder="Room size, budget, ideas…"></textarea></div>
-        <button class="btn gold" type="submit" data-mag>Send enquiry on WhatsApp →</button>
-      </form>
     </div>
+    <aside class="founder reveal">
+      <div class="fo-img">
+        <img data-img="founder|ceo" alt="Founder & CEO, TURBO Interior Design and Wood Works" loading="lazy">
+        <div class="fo-fb" aria-hidden="true"><svg viewBox="0 0 100 100"><circle cx="50" cy="34" r="18" fill="#2f8a84"/><path d="M14 96c0-22 16-36 36-36s36 14 36 36z" fill="#2f8a84"/></svg></div>
+      </div>
+      <div class="fo-body">
+        <span class="eyebrow" data-ta="நிறுவனர் & CEO">Founder &amp; CEO</span>
+        <h3 class="fo-name" id="foName" hidden></h3>
+        <div class="qm" aria-hidden="true">“</div>
+        <p class="fo-q" data-ta="15 ஆண்டுகளுக்கு முன் ஒரு எளிய வாக்குறுதியுடன் தொடங்கினோம் — ஒவ்வொரு வீட்டையும் எங்கள் சொந்த வீடு போல உருவாக்குவோம். இன்றும் நாங்கள் செய்யும் ஒவ்வொரு கிச்சன், கதவு, படிக்கட்டிலும் அந்த வாக்குறுதி உயிர்ப்புடன் இருக்கிறது.">Fifteen years ago we started with one simple promise — build every home as if it were our own. Today, that promise lives in every kitchen, door and staircase we make.</p>
+        <div class="fo-sig"><span data-ta="நிறுவனர் & CEO, டர்போ இன்டீரியர்ஸ்">Founder &amp; CEO, TURBO Interiors</span></div>
+      </div>
+    </aside>
   </div>
 </section>
 
@@ -531,7 +597,7 @@ footer{background:#e3eee9;padding:4rem 0 1.6rem;border-top:1px solid var(--line)
   <div class="wrap">
     <div class="fg">
       <div>
-        <a href="#home" class="logo" style="margin-bottom:1rem"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="1" y="1" width="46" height="46" rx="12" fill="#2f8a84"/><path d="M10 14h28v7H27v14h-6V21H10z" fill="#ffffff"/></svg><span><b>TURBO</b><small>Interior Design & Wood Works</small></span></a>
+        <a href="#home" class="logo foot" style="margin-bottom:1rem"><img class="logo-img" data-img="logoin" data-ext="png,jpg,jpeg,webp,svg" alt="TURBO Interior Design & Wood Works logo"><span class="logo-txt"><b>TURBO</b><small>Interior Design & Wood Works</small></span></a>
         <p style="max-width:340px">15 years of crafting modular kitchens, wardrobes, doors, staircases and complete home interiors in Trichy, Tamil Nadu.</p>
       </div>
       <div><h4>Services</h4><div id="fsv"></div></div>
@@ -551,9 +617,14 @@ footer{background:#e3eee9;padding:4rem 0 1.6rem;border-top:1px solid var(--line)
 "use strict";
 /* ====== EDIT THESE: your real contact details ====== */
 const CONFIG={
-  whatsapp:"91XXXXXXXXXX",          // country code + number, digits only (e.g. 919876543210)
-  phoneDisplay:"+91 XXXXX XXXXX",
-  email:"info@yourdomain.com"
+  whatsapp:"918508669279",          // country code + number, digits only (e.g. 919876543210)
+  phoneDisplay:"+91 8508669279",
+  email:"info@yourdomain.com",
+  founderName:"Mr. Sakthiyakeerthi DME,ID",                   // e.g. "Mr. Turbo Kumar" (leave "" to show only "Founder & CEO")
+  imgPath:"",                       // folder of your images, e.g. "images/" (leave "" if next to index.html)
+  showLogoText:false,               // true = show "TURBO Interior Design & Wood Works" text next to your logo image
+  // Exact file names (optional). Leave "" to auto-detect .jpg / .png / .jpeg / .webp
+  files:{ logoin:"about", about:"about", founder:"", im1:"", im2:"", im3:"", im4:"", im5:"", im6:"", im7:"", im8:"" }
 };
 /* =================================================== */
 const $=(s,c=document)=>c.querySelector(s),$$=(s,c=document)=>[...c.querySelectorAll(s)];
@@ -591,11 +662,10 @@ const S=[
   svg:`<g class="f"><rect x="66" y="8" width="108" height="160" rx="3"/></g><rect class="l" x="80" y="22" width="80" height="54" rx="2"/><rect class="l" x="80" y="88" width="80" height="68" rx="2"/><circle class="b" cx="152" cy="84" r="5"/><path class="l" d="M56 168h128"/>`}
 ];
 const hsT=$("#hsT");
-hsT.innerHTML=S.map((s,i)=>`<article class="panel"><div class="art"><span class="pn">0${i+1}</span><svg viewBox="0 0 240 180" aria-hidden="true">${s.svg}</svg></div><div class="ptxt"><h3 data-ta="${s.ta}">${s.en}</h3><p>${s.d}</p><ul>${s.b.map(x=>`<li>${x}</li>`).join("")}</ul><div><a href="#contact" class="btn gold sm" data-svc="${s.en}" data-ta="இதை பற்றி கேளுங்கள் →">Enquire about this →</a></div></div></article>`).join("");
+hsT.innerHTML=S.map((s,i)=>`<article class="panel"><div class="art"><span class="pn">0${i+1}</span><svg viewBox="0 0 240 180" aria-hidden="true">${s.svg}</svg><img data-img="im${i+1}" alt="${s.en} by TURBO Interior Design & Wood Works, Trichy"></div><div class="ptxt"><h3 data-ta="${s.ta}">${s.en}</h3><p>${s.d}</p><ul>${s.b.map(x=>`<li>${x}</li>`).join("")}</ul><div><a href="#contact" class="btn gold sm" data-svc="${s.en}" data-ta="வாட்ஸ்அப்பில் கேளுங்கள் →">Enquire on WhatsApp →</a></div></div></article>`).join("");
 $("#mq").innerHTML=[...S,...S].map(s=>`<span>◆ ${s.en}</span>`).join("");
-$("#fs").innerHTML=S.map(s=>`<option>${s.en}</option>`).join("")+"<option>Other / Not sure</option>";
 $("#fsv").innerHTML=S.map(s=>`<a href="#services">${s.en}</a>`).join("");
-hsT.addEventListener("click",e=>{const a=e.target.closest("[data-svc]");if(a)$("#fs").value=a.dataset.svc});
+$$("[data-svc]",hsT).forEach(a=>{if(phoneOK){a.href=`https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent("Hello TURBO, I'd like to enquire about "+a.dataset.svc+".")}`;a.target="_blank";a.rel="noopener"}else a.href="#contact"});
 
 /* language */
 function setLang(l){
@@ -645,15 +715,31 @@ if(fine&&!reduce){
 }
 
 /* finish picker */
-const FIN=[["Walnut","#5a3a24"],["Teak","#9a6a3a"],["Natural Oak","#c9a36a"],["Birch","#e6cfa8"],["Rosewood","#6e2d24"],["Ash White","#d9cfbf"]];
-const sw=$("#sw");
-sw.innerHTML=FIN.map((f,i)=>`<button type="button" style="--c:${f[1]}" data-i="${i}" aria-label="${f[0]}" class="${i?"":"on"}"></button>`).join("");
-let finSel=FIN[0][0];
-sw.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;const f=FIN[b.dataset.i];
-  $$("button",sw).forEach(x=>x.classList.toggle("on",x===b));
-  document.documentElement.style.setProperty("--fin",f[1]);$("#fname").textContent=f[0];finSel=f[0]});
-document.documentElement.style.setProperty("--fin",FIN[0][1]);
-$("#fReq").addEventListener("click",()=>{$("#fm").value=`I'd like to know more about the ${finSel} finish.`});
+const WOOD=[["Natural Oak","#d2a96c"],["Birch","#e6cfa8"],["Maple","#e0b983"],["Honey Pine","#d9a95a"],["Teak","#b07a3f"],["Cherry","#a24f33"],["Rosewood","#7a3b2e"],["Mahogany","#6f2f24"],["Walnut","#5a3a24"],["Wenge","#3f2b22"],["Ash Grey","#b9ae9f"],["Driftwood","#a89a85"]];
+const MICA=[["Ivory White","#f4eee2"],["Pearl Grey","#c9cdcb"],["Matt Grey","#a2a7a5"],["Charcoal","#4b504e"],["Sage Green","#b9cdb0"],["Olive","#8f9e60"],["Mint","#bfe3d0"],["Powder Blue","#bfd9e2"],["Navy","#3d5873"],["Lavender","#cdc1e2"],["Blush Pink","#efc3c0"],["Terracotta","#d58a68"],["Mustard","#e3b94d"],["Butter","#f4dc95"]];
+const WALNUT=WOOD.findIndex(f=>f[0]==="Walnut");
+const grp=(title,ta,arr,type)=>`<div class="sw-grp"><h4 data-ta="${ta}">${title}</h4><div class="sw">${arr.map((f,i)=>`<button type="button" class="${type==="wood"?"wd":""}${type==="wood"&&i===WALNUT?" on":""}" style="--c:${f[1]}" data-t="${type}" data-i="${i}" title="${f[0]}" aria-label="${f[0]} ${type}"></button>`).join("")}</div></div>`;
+$("#swWrap").innerHTML=grp("Wood colours","மர நிறங்கள்",WOOD,"wood")+grp("Mica / Laminate colours","மைகா / லேமினேட் நிறங்கள்",MICA,"mica");
+let finSel="Walnut · Wood";
+const fReq=$("#fReq");
+function fReqLink(){const msg=`Hello TURBO, I'd like to know more about the ${finSel} finish.`;if(phoneOK){fReq.href=`https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(msg)}`;fReq.target="_blank";fReq.rel="noopener"}else{fReq.href="#contact";fReq.removeAttribute("target")}}
+function setFin(f,t){const r=document.documentElement.style;r.setProperty("--fin",f[1]);r.setProperty("--gro",t==="wood"?.55:.07);finSel=f[0]+" · "+(t==="wood"?"Wood":"Mica");$("#fname").textContent=finSel;fReqLink()}
+$("#swWrap").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;const t=b.dataset.t;
+  $$("#swWrap button").forEach(x=>x.classList.toggle("on",x===b));setFin((t==="wood"?WOOD:MICA)[b.dataset.i],t)});
+setFin(WOOD[WALNUT],"wood");
+
+/* images (auto-detect extension, graceful fallback) */
+function loadImg(img){
+  const keys=img.dataset.img.split("|"),exts=(img.dataset.ext||"jpg,png,jpeg,webp").split(","),list=[];
+  const ov=CONFIG.files&&CONFIG.files[keys[0]];
+  if(ov)list.push(ov);else keys.forEach(k=>exts.forEach(e=>list.push(k+"."+e)));
+  let i=0;const host=img.parentElement;
+  const next=()=>{if(i>=list.length){img.removeAttribute("src");return}img.src=CONFIG.imgPath+list[i++]};
+  img.addEventListener("load",()=>{host.classList.add("has-img");if(keys[0]==="logoin"){let l=$("link[rel=icon]");if(!l){l=document.createElement("link");l.rel="icon";document.head.append(l)}l.href=img.src}});
+  img.addEventListener("error",next);next()}
+$$("img[data-img]").forEach(loadImg);
+if(CONFIG.showLogoText)$$(".logo").forEach(l=>l.classList.add("keeptxt"));
+if(CONFIG.founderName){const n=$("#foName");n.textContent=CONFIG.founderName;n.hidden=false}
 
 /* scroll engine */
 const pxEls=$$("[data-speed]"),prog=$("#progress"),topB=$("#top"),badge=$("#badgeSvg");
@@ -686,12 +772,6 @@ addEventListener("resize",()=>{rs();sizeHS();req()});
 $("#top").onclick=()=>scrollTo({top:0,behavior:"smooth"});
 
 /* enquiry form -> WhatsApp */
-$("#enq").addEventListener("submit",e=>{e.preventDefault();
-  const n=$("#fn").value.trim(),p=$("#fp").value.trim(),s=$("#fs").value,m=$("#fm").value.trim();
-  if(!n||!/^[+\d][\d\s-]{6,}$/.test(p)){toast("Please enter your name and a valid phone number.");return}
-  const text=`Hello TURBO,%0AName: ${encodeURIComponent(n)}%0APhone: ${encodeURIComponent(p)}%0AInterested in: ${encodeURIComponent(s)}%0A${encodeURIComponent(m||"")}`;
-  if(!phoneOK){toast("Thank you! (Set your WhatsApp number in the CONFIG block of index.htm to receive enquiries.)");return}
-  window.open(`https://wa.me/${CONFIG.whatsapp}?text=${text}`,"_blank","noopener");toast("Opening WhatsApp…");e.target.reset()});
 
 rs();sizeHS();update();
 addEventListener("load",()=>{rs();sizeHS();update()});

@@ -130,7 +130,7 @@ body.ready .hin{opacity:1;transform:none}
 
 /* about */
 .about-g{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,6rem);align-items:center}
-.collage{position:relative;aspect-ratio:1/1.08;border-radius:30px;background:linear-gradient(160deg,var(--sky),var(--peach));overflow:hidden;isolation:isolate;box-shadow:0 30px 70px rgba(47,138,132,.15)}
+.collage{position:relative;aspect-ratio:1/1.08;border-radius:10px;background:linear-gradient(160deg,var(--sky),var(--peach));overflow:hidden;isolation:isolate;box-shadow:0 30px 70px rgba(47,138,132,.15)}
 .collage .plank{z-index:0}
 .cp1{--c1:#f0d6b0;--c2:#d4a877;--r:-6deg;width:34%;height:78%;left:10%;top:10%}
 .cp2{--c1:#f7e6c9;--c2:#dfba88;--r:5deg;width:30%;height:70%;left:38%;top:18%}
@@ -365,7 +365,7 @@ footer{background:#e3eee9;padding:4rem 0 1.6rem;border-top:1px solid var(--line)
   .hero-stats{gap:1.2rem}
   .reveal.l,.reveal.r{transform:translateY(40px)}
   .mbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:160;background:rgba(251,249,244,.96);backdrop-filter:blur(14px);border-top:1px solid var(--line);padding:.6rem;gap:.6rem}
-  .mbar a{padding:.8rem;text-align:center;border-radius:12px;font-weight:600;font-size:.92rem}
+  .mbar a{padding:.8rem;text-align:center;border-radius:50%;font-weight:600;font-size:.92rem}
   .mbar .c{background:linear-gradient(135deg,var(--teal2),var(--teal));color:#fff}
   .mbar .w{background:#25d366;color:#fff}
   #wa{display:none}#top{bottom:76px}
@@ -570,7 +570,7 @@ footer{background:#e3eee9;padding:4rem 0 1.6rem;border-top:1px solid var(--line)
     </div>
     <div class="contact-g">
       <div class="info">
-        <div class="ic reveal"><i>📍</i><div><small>Location</small><b>Trichy (Tiruchirappalli), Tamil Nadu</b></div></div>
+        <div class="ic reveal"><i>↗</i><div><small>Location</small><b>Trichy (Tiruchirappalli), Tamil Nadu</b></div></div>
         <a class="ic reveal" style="--dl:.1s" data-tel href="#"><i>📞</i><div><small>Call us</small><b data-phone>+91 XXXXX XXXXX</b></div></a>
         <a class="ic reveal" style="--dl:.2s" data-wa target="_blank" rel="noopener" href="#"><i>💬</i><div><small>WhatsApp</small><b>Chat with us</b></div></a>
         <a class="ic reveal" style="--dl:.3s" data-mail href="#"><i>✉️</i><div><small>Email</small><b data-email>info@yourdomain.com</b></div></a>
@@ -624,7 +624,7 @@ const CONFIG={
   imgPath:"",                       // folder of your images, e.g. "images/" (leave "" if next to index.html)
   showLogoText:false,               // true = show "TURBO Interior Design & Wood Works" text next to your logo image
   // Exact file names (optional). Leave "" to auto-detect .jpg / .png / .jpeg / .webp
-  files:{ logoin:"about.png", about:"about.png", founder:"my.jpeg", im1:"", im2:"", im3:"", im4:"", im5:"", im6:"", im7:"", im8:"" }
+  files:{ logoin:"about.png", about:"about.png", founder:"my.jpeg", im1:"im1", im2:"im2", im3:"im3", im4:"im4", im5:"im5", im6:"im6", im7:"im7", im8:"im8" }
 };
 /* =================================================== */
 const $=(s,c=document)=>c.querySelector(s),$$=(s,c=document)=>[...c.querySelectorAll(s)];
